@@ -1,3 +1,9 @@
+---
+title: Mean
+date: "2015-05-28T22:40:32.169Z"
+description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+---
+
 # Mean
 
 Mean is a measure fo central tendency. It's usually know as average, but in mathematical terms you'd recognize it as mean, also because there are different types of means that can be calculated. For the sake of simpliciclity I'll approach mean here with the same meaning as the average of a dataset.
