@@ -59,3 +59,20 @@ print(f"The mean or the average grade for this class is: {mean_np}")
 
     The mean or the average grade for this class is: 7.8
 
+
+
+```python
+import matplotlib.pyplot as plt
+plt.plot(dataset);
+```
+
+
+    
+![png](output_4_0.png)
+    
+
+
+
+```python
+
+```
