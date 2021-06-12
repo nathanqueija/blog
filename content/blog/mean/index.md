@@ -1,7 +1,7 @@
 ---
 title: Mean
 date: "2021-06-12"
-description: Descriptive Statistics: Mean - what is the center of my data?
+description: "Descriptive Statistics: Mean - what is the center of my data?"
 ---
 
 # Mean
