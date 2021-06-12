@@ -6,12 +6,11 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import "katex/dist/katex.min.css"
 
-const BlogPostTemplate = ({ data, location }) => {
+const BlogPostTemplate = ({ data, location, ...rwst }) => {
+  console.log(rwst)
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-
-  console.log(post)
 
   return (
     <Layout location={location} title={siteTitle}>

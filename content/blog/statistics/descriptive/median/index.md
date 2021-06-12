@@ -1,6 +1,7 @@
 ---
 title: Median
-date: "2021-06-13"
+date: "2021-06-12"
+slug: median
 description: "Descriptive Statistics: Median - what is the center of my data?"
 categories: ["Statistics", "Descriptive Statistics"]
 ---

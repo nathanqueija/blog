@@ -1,6 +1,7 @@
 ---
 title: Mean
 date: "2021-06-12"
+slug: mean
 description: "Descriptive Statistics: Mean - what is the center of my data?"
 categories: ["Statistics", "Descriptive Statistics"]
 ---

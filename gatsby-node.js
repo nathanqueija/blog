@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const _ = require("lodash")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -12,18 +13,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        postsRemark: allMarkdownRemark(
+        allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           limit: 2000
         ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                categories
-              }
+          nodes {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              categories
             }
           }
         }
