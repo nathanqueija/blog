@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Nathan Queija`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Nathan Queija`,
+      summary: `who lives and works in Berlin.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `A blog about tech, books, and life`,
+    siteUrl: `https://nathanqueija.me`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `nathanqueija`,
     },
   },
   plugins: [
