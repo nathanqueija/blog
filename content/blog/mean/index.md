@@ -4,8 +4,6 @@ date: "2021-06-12"
 description: "Descriptive Statistics: Mean - what is the center of my data?"
 ---
 
-# Mean
-
 Mean is a measure fo central tendency. It's usually know as average, but in mathematical terms you'd recognize it as mean, also because there are different types of means that can be calculated. For the sake of simpliciclity I'll approach mean here with the same meaning as the average of a dataset.
 
 In order to illustrate the concept of mean I'll use the following dataset:
