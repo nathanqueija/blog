@@ -6,20 +6,30 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const categoryTemplate = path.resolve("src/templates/categories.js")
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
+        postsRemark: allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          limit: 2000
         ) {
-          nodes {
-            id
-            fields {
-              slug
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                categories
+              }
             }
+          }
+        }
+        categoriesGroup: allMarkdownRemark(limit: 2000) {
+          group(field: frontmatter___categories) {
+            fieldValue
           }
         }
       }
@@ -56,6 +66,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  // Extract tag data from query
+  const categories = result.data.categoriesGroup.group
+
+  categories.forEach(category => {
+    createPage({
+      path: `/categories/${_.kebabCase(category.fieldValue)}/`,
+      component: categoryTemplate,
+      context: {
+        category: category.fieldValue,
+      },
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

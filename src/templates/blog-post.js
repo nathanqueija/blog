@@ -11,6 +11,8 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
+  console.log(post)
+
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
@@ -86,6 +88,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        categories
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
